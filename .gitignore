@@ -25,3 +25,8 @@ build/
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# loadInput with cookie
+src/main/kotlin/pl/bizarre/common/loadInput.kt
+
+.DS_Store

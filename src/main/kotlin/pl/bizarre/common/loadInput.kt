@@ -11,7 +11,7 @@ private val httpClient = HttpClient(Apache)
 
 fun loadInput(day: Int): List<String> =
     runBlocking {
-        httpClient.get("https://adventofcode.com/2021/day/$day/input") {
+        httpClient.get("https://adventofcode.com/2022/day/$day/input") {
             header("Cookie", "Cookie")
         }.body<String>()
     }.split('\n')

@@ -14,4 +14,4 @@ fun loadInput(day: Int): List<String> =
         httpClient.get("https://adventofcode.com/2022/day/$day/input") {
             header("Cookie", "Cookie")
         }.body<String>()
-    }.split('\n')
+    }.split('\n').dropLast(1)

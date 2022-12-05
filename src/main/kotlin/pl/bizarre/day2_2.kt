@@ -1,9 +1,9 @@
 package pl.bizarre
 
-import pl.bizarre.Move.Companion.findMove
-import pl.bizarre.Move.Paper
-import pl.bizarre.Move.Rock
-import pl.bizarre.Move.Scissors
+import pl.bizarre.Day2Move.Companion.findMove
+import pl.bizarre.Day2Move.Paper
+import pl.bizarre.Day2Move.Rock
+import pl.bizarre.Day2Move.Scissors
 import pl.bizarre.common.loadInput
 import java.util.regex.Pattern
 
@@ -29,7 +29,7 @@ fun result(value: String): Int = when (value) {
     else -> error("Invalid key $value")
 }
 
-fun moveForResult(opponentMove: Move, result: Int): Move =
+fun moveForResult(opponentMove: Day2Move, result: Int): Day2Move =
     when {
         // on nozyczki, to ja musze kamien bo result == 1
         result == 0 -> opponentMove

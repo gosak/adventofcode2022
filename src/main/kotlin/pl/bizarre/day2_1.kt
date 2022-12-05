@@ -1,6 +1,6 @@
 package pl.bizarre
 
-import pl.bizarre.Move.Companion.findMove
+import pl.bizarre.Day2Move.Companion.findMove
 import pl.bizarre.common.loadInput
 import java.util.regex.Pattern
 
@@ -17,7 +17,7 @@ fun day2_1(input: List<String>): Int {
     }
 }
 
-enum class Move(
+enum class Day2Move(
     val keys: Collection<String>,
     val score: Int,
 ) {
@@ -26,7 +26,7 @@ enum class Move(
     Scissors(setOf("C", "Z"), 3);
 
     // 0 - draw, 1 - win, -1 - lose
-    fun result(opponent: Move): Int =
+    fun result(opponent: Day2Move): Int =
         when {
             opponent == this -> 0
             opponent == Rock && this == Paper -> 1
@@ -41,5 +41,5 @@ enum class Move(
     }
 }
 
-fun matchResult(opponentMove: Move, myMove: Move) =
+fun matchResult(opponentMove: Day2Move, myMove: Day2Move) =
     3 + myMove.result(opponentMove) * 3 + myMove.score
